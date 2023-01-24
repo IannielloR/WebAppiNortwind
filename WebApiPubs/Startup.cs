@@ -27,7 +27,7 @@ namespace WebApiPubs
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PubsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("pubs")));
+            services.AddDbContext<PubsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("KeyDb")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

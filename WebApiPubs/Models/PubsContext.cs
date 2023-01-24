@@ -24,7 +24,7 @@ namespace WebApiPubs.Models
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<Jobs> Jobs { get; set; }
         public virtual DbSet<PubInfo> PubInfo { get; set; }
-        public virtual DbSet<Publishers> Publishers { get; set; }
+        public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Roysched> Roysched { get; set; }
         public virtual DbSet<Sales> Sales { get; set; }
         public virtual DbSet<Stores> Stores { get; set; }
@@ -254,7 +254,7 @@ namespace WebApiPubs.Models
                     .HasConstraintName("FK__pub_info__pub_id__571DF1D5");
             });
 
-            modelBuilder.Entity<Publishers>(entity =>
+            modelBuilder.Entity<Publisher>(entity =>
             {
                 entity.HasKey(e => e.PubId)
                     .HasName("UPKCL_pubind");

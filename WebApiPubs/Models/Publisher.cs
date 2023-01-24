@@ -7,9 +7,9 @@ using System.Collections.Generic;
 
 namespace WebApiPubs.Models
 {
-    public partial class Publishers
+    public partial class Publisher
     {
-        public Publishers()
+        public Publisher()
         {
             Employee = new HashSet<Employee>();
             Titles = new HashSet<Titles>();

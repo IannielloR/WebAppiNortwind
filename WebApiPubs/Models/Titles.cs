@@ -26,7 +26,7 @@ namespace WebApiPubs.Models
         public string Notes { get; set; }
         public DateTime Pubdate { get; set; }
 
-        public virtual Publishers Pub { get; set; }
+        public virtual Publisher Pub { get; set; }
         public virtual ICollection<Sales> Sales { get; set; }
         public virtual ICollection<Titleauthor> Titleauthor { get; set; }
     }

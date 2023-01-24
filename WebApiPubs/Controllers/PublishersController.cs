@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using WebApiPubs.Models;
 using System.Linq;
-using System.Security.Policy;
+//using System.Security.Policy;
 
 namespace WebApiPubs.Controllers
 {
@@ -20,15 +20,15 @@ namespace WebApiPubs.Controllers
         }
         // Get
         [HttpGet]
-        public ActionResult<IEnumerable<Publishers>> GetClinica()
+        public ActionResult<IEnumerable<Publisher>> GetClinica()
         {
             return context.Publishers.ToList();
         }
         //Get por Id
         [HttpGet("{id}")]
-        public ActionResult<Publishers> GetByID(string id)
+        public ActionResult<Publisher> GetByID(string id)
         {
-            Publishers publisher = (from p in context.Publishers
+            Models.Publisher publisher = (from p in context.Publishers
                                     where id == p.PubId
                                  select p).SingleOrDefault();
             return publisher;
@@ -36,7 +36,7 @@ namespace WebApiPubs.Controllers
         //UPDATE
         //PUT api/autor/{id}
         [HttpPut("{id}")]
-        public ActionResult Put(string id, Publishers publisher)
+        public ActionResult Put(string id, [FromBody]Publisher publisher)
         {
             if (id != publisher.PubId)
             {
@@ -50,7 +50,7 @@ namespace WebApiPubs.Controllers
 
         //INSERT
         [HttpPost]
-        public ActionResult Post(Publishers publisher)
+        public ActionResult Post(Publisher publisher)
         {
             if (!ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace WebApiPubs.Controllers
         //DELETE
         //DELETE api/autor/{id}
         [HttpDelete("{id}")]
-        public ActionResult<Publishers> Delete(string id)
+        public ActionResult<Publisher> Delete(string id)
         {
             var publisher = (from p in context.Publishers
                             where p.PubId == id

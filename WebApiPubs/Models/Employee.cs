@@ -19,6 +19,6 @@ namespace WebApiPubs.Models
         public DateTime HireDate { get; set; }
 
         public virtual Jobs Job { get; set; }
-        public virtual Publishers Pub { get; set; }
+        public virtual Publisher Pub { get; set; }
     }
 }
