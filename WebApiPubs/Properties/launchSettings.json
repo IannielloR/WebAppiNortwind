@@ -3,7 +3,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/Publishers",
+      "launchUrl": "api/Stores",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -11,7 +11,7 @@
     "WebApiPubs": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Publishers",
+      "launchUrl": "api/Stores",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
