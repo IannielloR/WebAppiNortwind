@@ -47,7 +47,7 @@ namespace WebApiPubs.Controllers
         public ActionResult<IEnumerable<Stores>> GetByZip(string zip)
         {
             List<Stores> store = (from s in context.Stores
-                                  where s.StorId== zip
+                                  where s.Zip== zip
                                   select s).ToList();
             if(store.Count == 0)
             {
